@@ -9,7 +9,9 @@ public class TestAbstract {
 	public static void main(String[] args) {
 		
 		List<TestAbstractFather> dataList=new ArrayList<>();
-		dataList.add(new WZY());
+		WZY wzy = new WZY();
+		WZY wzy1=wzy;
+		dataList.add(wzy);
 		dataList.add(new WBY());
 		
 		Iterator<TestAbstractFather> iterator = dataList.iterator();

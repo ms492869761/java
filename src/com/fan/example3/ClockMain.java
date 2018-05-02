@@ -7,7 +7,8 @@ public class ClockMain {
 		Thread thread=new Thread(new Runnable() {
 			@Override
 			public void run() {
-				while(true){
+				Thread currentThread = Thread.currentThread();
+				while(currentThread.isInterrupted()){
 					clock.run();
 					try {
 						Thread.sleep(1000);
@@ -18,6 +19,9 @@ public class ClockMain {
 			}
 		});
 		thread.start();
+		thread.stop();
+		thread.interrupt();
+		thread.isInterrupted();
 	}
 	
 	

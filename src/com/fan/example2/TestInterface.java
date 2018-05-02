@@ -5,11 +5,19 @@ import java.util.List;
 
 public class TestInterface {
 	
+	private static int b=0; 
+	
+	static{
+		// todo  
+		b=100;
+	}
+	
+	
+	
 	public static void main(String[] args) {
 		TestInterfaceImp t=new TestInterfaceImp();
 		t.methodA();
 		int methodB = t.methodB();
-		
 		
 		ITestInterface it=new TestInterfaceImp();
 		it.methodA();
